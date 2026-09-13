@@ -82,5 +82,6 @@ EOF
 ${SUDO} mv /tmp/nosana.service /etc/systemd/system/nosana.service
 ${SUDO} systemctl daemon-reload
 ${SUDO} systemctl enable nosana.service
+${SUDO} systemctl disable getty@tty1.service
 
 ${SUDO} reboot
