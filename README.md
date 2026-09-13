@@ -1,6 +1,6 @@
 # nosana-autosetup
 
-An automated script for quick Nosana node setup.
+An automated script for quick Nosana node setup. I use it on _Ubuntu server 26.04_.
 
 # What this does
 

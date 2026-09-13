@@ -84,4 +84,6 @@ ${SUDO} systemctl daemon-reload
 ${SUDO} systemctl enable nosana.service
 ${SUDO} systemctl disable getty@tty1.service
 
+echo ip_tables | ${SUDO} tee -a /etc/modules
+
 ${SUDO} reboot
