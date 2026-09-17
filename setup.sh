@@ -65,7 +65,7 @@ Wants=network-online.target
 Type=simple
 User=${TARGET_USER}
 WorkingDirectory=${TARGET_HOME}
-ExecStart=/usr/bin/bash -c '/usr/bin/script -q --return -c "bash <(wget -qO- https://nosana.com/start.sh)"; reset'
+ExecStart=/usr/bin/bash -c '/usr/bin/script -q --return -c "bash <(wget -qO- https://nosana.com/start.sh)"'
 StandardOutput=tty
 StandardError=tty
 StandardInput=tty
@@ -84,6 +84,6 @@ ${SUDO} systemctl daemon-reload
 ${SUDO} systemctl enable nosana.service
 ${SUDO} systemctl disable getty@tty1.service
 
-echo ip_tables | ${SUDO} tee -a /etc/modules
+grep -qxF "ip_tables" /etc/modules || echo ip_tables | ${SUDO} tee -a /etc/modules
 
 ${SUDO} reboot
