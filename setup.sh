@@ -72,8 +72,8 @@ StandardInput=tty
 TTYPath=/dev/tty1
 TTYReset=yes
 TTYVHangup=yes
-Restart=on-failure
-RestartSec=10
+Restart=always
+RestartSec=30
 
 [Install]
 WantedBy=multi-user.target
